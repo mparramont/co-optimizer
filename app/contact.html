@@ -18,9 +18,10 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
     <style>
-    /* Make jumbotron buttons the right size to fit 2 in a row */
+    /* Make jumbotron buttons the right size to fit 4 in a row */
       .jumbotron .btn {
-        width: 200px;
+        font-size: 15px;
+        width: 140px;
       }
     </style>
   </head>
@@ -36,35 +37,54 @@
       </div>
 
       <div class="jumbotron">
-        <h1>Co-optimizer</h1>
-        <p class="lead">"What can we play?" The answer.</p>
+        <h4>Let's play…</h4>
+        <h2 class='game-title'></h2>
+        <p class='game-genre'></p>
+        <img class='game-image' src=''></img>
+        <p>Something else?</p>
         <p>
           <a class="btn btn-lg btn-primary" href="/two-players.html">Two players </a>
           <a class="btn btn-lg btn-primary" href="/three-players.html">Three players </a>
-        </p>
-        <p>
           <a class="btn btn-lg btn-primary" href="/four-players.html">Four players </a>
           <a class="btn btn-lg btn-primary" href="/more-than-four.html">More than four</a>
         </p>
       </div>
 
-      <div class="row marketing">
-        <div class="col-lg-12">
-          <h4>Get suggestions depending on how many are you</h4>
-          <p>Two of you? Fighting game. Party of Four? Bomberman.</p>
-
-          <h4>Stop bickering about which game you're gonna play</h4>
-          <p>Click and play. Whoever questions the sugestion pays for the beers.</p>
-
-          <h4>Track scores and see who's best (coming soon!)</h4>
-          <p>Keep books on who's on top of the game, rub it on each other's faces for weeks to come.</p>
-
-        </div>
-      </div>
-
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from AqueousLabs</p>
-      </div>
+      <table class="table game-suggestions">
+        <caption>More games</caption>
+        <thead>
+          <tr>
+            <th>Game</th>
+            <th>Genre</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-id='131'><td>Left 4 Dead</td><td>FPS</td></tr>
+          <tr data-id='1207'><td>Left 4 Dead 2</td><td>FPS</td></tr>
+          <tr data-id='1499'><td>Portal 2</td><td>Puzzle</td></tr>
+          <tr data-id='1554'><td>Tidalis</td><td>Puzzle</td></tr>
+          <tr data-id='2163'><td>Skylanders: Spyro's Adventure</td><td>Action/Adventure</td></tr>
+          <tr data-id='2190'><td>ibb and obb</td><td>Platformer</td></tr>
+          <tr data-id='2556'><td>Sonic the Hedgehog 4: Episode II</td><td>Platformer</td></tr>
+          <tr data-id='3620'><td>Chariot</td><td>Puzzle Platformer</td></tr>
+          <tr data-id='2112'><td>Renegade Ops</td><td>Twin Stick Shooter</td></tr>
+          <tr data-id='2508'><td>Wyv and Keep: The Temple of the Lost Idol</td><td>Puzzle Platformer</td></tr>
+          <tr data-id='2893'><td>Final Exam</td><td>Action</td></tr>
+          <tr data-id='3228'><td>Ring Runner</td><td>Twin Stick Shooter</td></tr>
+          <tr data-id='3325'><td>Shadow Puppeteer</td><td>Puzzle Platformer</td></tr>
+          <tr data-id='3495'><td>Abyss Odyssey</td><td>Action/Adventure</td></tr>
+          <tr data-id='2733'><td>Sacred 3</td><td>Action RPG</td></tr>
+          <tr data-id='2741'><td>Thunder Wolves</td><td>Flight</td></tr>
+          <tr data-id='2787'><td>LEGO The Lord of the Rings</td><td>Action/Adventure</td></tr>
+          <tr data-id='2851'><td>LEGO Marvel Super Heroes</td><td>Action</td></tr>
+          <tr data-id='2988'><td>How to Survive</td><td>Action/Adventure</td></tr>
+          <tr data-id='3093'><td>The Chaos Engine</td><td>Action</td></tr>
+          <tr data-id='3128'><td>Foul Play</td><td>Beat-Em-Up</td></tr>
+          <tr data-id='3247'><td>BOSSES FOREVER 2.BRO</td><td>Action</td></tr>
+          <tr data-id='3357'><td>ZAMB! Biomutant Extermination</td><td>Arcade</td></tr>
+          <tr data-id='1229'><td>LEGO Harry Potter: Years 1-4</td><td>Action</td></tr>
+          <tr data-id='1575'><td>The First Templar</td><td>Action RPG</td></tr>        </tbody>
+      </table>
 
     </div>
 
@@ -72,7 +92,6 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/lodash/lodash.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -98,6 +117,7 @@
         <script src="bower_components/bootstrap/js/scrollspy.js"></script>
         <script src="bower_components/bootstrap/js/collapse.js"></script>
         <script src="bower_components/bootstrap/js/tab.js"></script>
+        <script src="bower_components/lodash/lodash.js"></script>
         <!-- endbuild -->
 
         <!-- build:js({app,.tmp}) scripts/main.js -->

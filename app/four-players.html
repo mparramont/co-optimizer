@@ -18,9 +18,10 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
     <style>
-    /* Make jumbotron buttons the right size to fit 2 in a row */
+    /* Make jumbotron buttons the right size to fit 4 in a row */
       .jumbotron .btn {
-        width: 200px;
+        font-size: 15px;
+        width: 140px;
       }
     </style>
   </head>
@@ -36,43 +37,61 @@
       </div>
 
       <div class="jumbotron">
-        <h1>Co-optimizer</h1>
-        <p class="lead">"What can we play?" The answer.</p>
+        <h4>Let's play…</h4>
+        <h2 class='game-title'></h2>
+        <p class='game-genre'></p>
+        <img class='game-image' src=''></img>
+        <p>Something else?</p>
         <p>
           <a class="btn btn-lg btn-primary" href="/two-players.html">Two players </a>
           <a class="btn btn-lg btn-primary" href="/three-players.html">Three players </a>
-        </p>
-        <p>
           <a class="btn btn-lg btn-primary" href="/four-players.html">Four players </a>
           <a class="btn btn-lg btn-primary" href="/more-than-four.html">More than four</a>
         </p>
       </div>
 
-      <div class="row marketing">
-        <div class="col-lg-12">
-          <h4>Get suggestions depending on how many are you</h4>
-          <p>Two of you? Fighting game. Party of Four? Bomberman.</p>
-
-          <h4>Stop bickering about which game you're gonna play</h4>
-          <p>Click and play. Whoever questions the sugestion pays for the beers.</p>
-
-          <h4>Track scores and see who's best (coming soon!)</h4>
-          <p>Keep books on who's on top of the game, rub it on each other's faces for weeks to come.</p>
-
-        </div>
-      </div>
-
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from AqueousLabs</p>
-      </div>
-
+      <table class="table game-suggestions">
+        <caption>More games</caption>
+        <thead>
+          <tr>
+            <th>Game</th>
+            <th>Genre</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-id='2475'><td>Monaco: What's Yours is Mine</td><td>Action</td></tr>
+          <tr data-id='1772'><td>Dungeon Defenders</td><td>None</td></tr>
+          <tr data-id='2868'><td>FORCED</td><td>Action RPG</td></tr>
+          <tr data-id='3049'><td>Risk of Rain</td><td>Action/Adventure</td></tr>
+          <tr data-id='3201'><td>Tiny Brains</td><td>Puzzle Platformer</td></tr>
+          <tr data-id='3344'><td>Boot Hill Heroes</td><td>RPG</td></tr>
+          <tr data-id='1584'><td>Magicka</td><td>Action RPG</td></tr>
+          <tr data-id='2175'><td>Jamestown</td><td>Shmup</td></tr>
+          <tr data-id='2495'><td>A Virus Named TOM</td><td>Puzzle</td></tr>
+          <tr data-id='2885'><td>Hammerwatch</td><td>Action RPG</td></tr>
+          <tr data-id='3323'><td>Gauntlet</td><td>Action RPG</td></tr>
+          <tr data-id='1988'><td>Serious Sam 3: BFE</td><td>FPS</td></tr>
+          <tr data-id='2923'><td>Dungeons & Dragons: Chronicles of Mystara</td><td>Beat-Em-Up</td></tr>
+          <tr data-id='3012'><td>Mercenary Kings</td><td>Shmup</td></tr>
+          <tr data-id='3070'><td>Rayman Legends</td><td>Platformer</td></tr>
+          <tr data-id='3069'><td>Fist Puncher</td><td>Beat-Em-Up</td></tr>
+          <tr data-id='3291'><td>Age of Wonders III</td><td>Turn Based Strategy</td></tr>
+          <tr data-id='3621'><td>Devil's Dare</td><td>Beat-Em-Up</td></tr>
+          <tr data-id='3720'><td>Phantom Breaker: Battle Grounds</td><td>Beat-Em-Up</td></tr>
+          <tr data-id='3469'><td>Lara Croft and the Temple of Osiris</td><td>Action</td></tr>
+          <tr data-id='3535'><td>Geometry Wars 3: Dimensions</td><td>Twin Stick Shooter</td></tr>
+          <tr data-id='3072'><td>Second Chance Heroes</td><td>Action RPG</td></tr>
+          <tr data-id='1864'><td>Ghostbusters: Sanctum of Slime</td><td>Twin Stick Shooter</td></tr>
+          <tr data-id='2324'><td>Disney Universe</td><td>Platformer</td></tr>
+          <tr data-id='2823'><td>Retrobooster</td><td>Shmup</td></tr>
+        </tbody>
+      </table>
     </div>
 
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/lodash/lodash.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -98,6 +117,7 @@
         <script src="bower_components/bootstrap/js/scrollspy.js"></script>
         <script src="bower_components/bootstrap/js/collapse.js"></script>
         <script src="bower_components/bootstrap/js/tab.js"></script>
+        <script src="bower_components/lodash/lodash.js"></script>
         <!-- endbuild -->
 
         <!-- build:js({app,.tmp}) scripts/main.js -->

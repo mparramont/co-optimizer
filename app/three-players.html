@@ -18,9 +18,10 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
     <style>
-    /* Make jumbotron buttons the right size to fit 2 in a row */
+    /* Make jumbotron buttons the right size to fit 4 in a row */
       .jumbotron .btn {
-        width: 200px;
+        font-size: 15px;
+        width: 140px;
       }
     </style>
   </head>
@@ -36,35 +37,43 @@
       </div>
 
       <div class="jumbotron">
-        <h1>Co-optimizer</h1>
-        <p class="lead">"What can we play?" The answer.</p>
+        <h4>Let's play…</h4>
+        <h2 class='game-title'></h2>
+        <p class='game-genre'></p>
+        <img class='game-image' src=''></img>
+        <p>Something else?</p>
         <p>
           <a class="btn btn-lg btn-primary" href="/two-players.html">Two players </a>
           <a class="btn btn-lg btn-primary" href="/three-players.html">Three players </a>
-        </p>
-        <p>
           <a class="btn btn-lg btn-primary" href="/four-players.html">Four players </a>
           <a class="btn btn-lg btn-primary" href="/more-than-four.html">More than four</a>
         </p>
       </div>
 
-      <div class="row marketing">
-        <div class="col-lg-12">
-          <h4>Get suggestions depending on how many are you</h4>
-          <p>Two of you? Fighting game. Party of Four? Bomberman.</p>
-
-          <h4>Stop bickering about which game you're gonna play</h4>
-          <p>Click and play. Whoever questions the sugestion pays for the beers.</p>
-
-          <h4>Track scores and see who's best (coming soon!)</h4>
-          <p>Keep books on who's on top of the game, rub it on each other's faces for weeks to come.</p>
-
-        </div>
-      </div>
-
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from AqueousLabs</p>
-      </div>
+      <table class="table game-suggestions">
+        <caption>More games</caption>
+        <thead>
+          <tr>
+            <th>Game</th>
+            <th>Genre</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-id='1946'><td>Atom Zombie Smasher</td><td>RTS</td></tr>
+          <tr data-id='2341'><td>Rampage World Tour</td><td>Arcade</td></tr>
+          <tr data-id='2933'><td>Signal Ops</td><td>FPS</td></tr>
+          <tr data-id='2983'><td>Awesomenauts</td><td>Platformer</td></tr>
+          <tr data-id='3284'><td>Waves: Arena Tactics</td><td>Twin Stick Shooter</td></tr>
+          <tr data-id='3529'><td>Dungeons: The Eye of Draconus</td><td>Beat-Em-Up</td></tr>
+          <tr data-id='3785'><td>Trine 3: The Artifacts of Power</td><td>Puzzle Platformer</td></tr>
+          <tr data-id='2817'><td>Young Justice: Legacy</td><td>Action RPG</td></tr>
+          <tr data-id='2701'><td>Sacred Citadel</td><td>Beat-Em-Up</td></tr>
+          <tr data-id='2515'><td>DungeonLand</td><td>Action RPG</td></tr>
+          <tr data-id='1158'><td>Trine</td><td>Puzzle Platformer</td></tr>
+          <tr data-id='2630'><td>The Cave</td><td>Puzzle Platformer</td></tr>
+          <tr data-id='1885'><td>Trine 2</td><td>Puzzle Platformer</td></tr>
+        </tbody>
+      </table>
 
     </div>
 
@@ -72,7 +81,6 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/lodash/lodash.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -98,6 +106,7 @@
         <script src="bower_components/bootstrap/js/scrollspy.js"></script>
         <script src="bower_components/bootstrap/js/collapse.js"></script>
         <script src="bower_components/bootstrap/js/tab.js"></script>
+        <script src="bower_components/lodash/lodash.js"></script>
         <!-- endbuild -->
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
