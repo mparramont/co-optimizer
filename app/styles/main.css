@@ -57,6 +57,12 @@ body {
   margin-top: 28px;
 }
 
+.cool:hover {
+  color: red;
+}
+.cool:hover::after {
+  content: ":) :D !! (╯°□°）╯︵ ┻━┻"
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
