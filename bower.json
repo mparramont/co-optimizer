@@ -1,9 +1,0 @@
-{
-  "name": "co-optimizer",
-  "private": true,
-  "dependencies": {
-    "bootstrap": "~3.2.0",
-    "modernizr": "~2.8.2",
-    "lodash": "~3.8.0"
-  }
-}

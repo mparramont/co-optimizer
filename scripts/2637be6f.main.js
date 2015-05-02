@@ -1,0 +1,1 @@
+$(document).ready(function(){var a=$(".game-suggestions tr"),b=$(_.sample(a)),c=b.data("id"),d=b.find("td:first-child").text(),e=b.find("td:last-child").text();$(".game-title").text(d),$(".game-genre").text(e),$(".game-image").attr("src","http://www.co-optimus.com/image.php?id="+c)});
